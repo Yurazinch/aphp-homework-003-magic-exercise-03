@@ -16,18 +16,18 @@ class Person
 
     public function __toString(): string
     {
-        return "\n Имя: {$this->mame},\n фамилия {$this->surname},\n возраст {$this->age} лет.\n";  
+        return "\n Имя: {$this->name},\n фамилия: {$this->surname},\n возраст: {$this->age} лет.\n";  
     }
 
-    public function __set(string $property, mixed $value)
+    public function __set($age, mixed $value)
     {
-        $this->property = $value;
+        $this->age = $value;    
     }    
 
-    public function __get(string $property): mixed
+    public function __get($age): mixed
     {
         {
-            return $this->property;
+            return $this->$age;
         }
     }
 
@@ -41,6 +41,5 @@ class Person
         $this->name;
         $this->surname;
         $this->age;
-    }   
-
+    }
 }

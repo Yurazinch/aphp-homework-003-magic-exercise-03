@@ -6,7 +6,7 @@ require_once('PeopleList.php');
 
 $personList = new PeopleList;
 
-foreach($person as $key => $value)
+foreach($personList as $key => $value)
 {
-    echo $person;
+    var_dump($key, $value);
 }

@@ -18,32 +18,24 @@ class PeopleList implements Iterator
     }
 
     public function rewind(): void {
-        var_dump(__METHOD__);
         $this->position = 0;
     }
 
+    #[\ReturnTypeWillChange]
     public function current() {
-        var_dump(__METHOD__);
         return $this->array[$this->position];
     }
 
+    #[\ReturnTypeWillChange]
     public function key() {
-        var_dump(__METHOD__);
         return $this->position;
     }
 
     public function next(): void {
-        var_dump(__METHOD__);
         ++$this->position;
     }
 
     public function valid(): bool {
-        var_dump(__METHOD__);
         return isset($this->array[$this->position]);
-    }
-
-    public function __toString(): string
-    {
-        return "Имя: {$this->mame}, фамилия {$this->surname}.\n";  
     }
 }
