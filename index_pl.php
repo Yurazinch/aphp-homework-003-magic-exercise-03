@@ -8,5 +8,5 @@ $personList = new PeopleList;
 
 foreach($personList as $key => $value)
 {
-    var_dump($key, $value);
+    echo $key + 1, $value;
 }
